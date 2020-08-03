@@ -54,5 +54,8 @@ namespace Contpaqi.Sql.Contabilidad.Empresa
 
         [StringLength(30)]
         public string SegContCliente7 { get; set; }
+
+        [StringLength(20)]
+        public string CodigoAsiento { get; set; }
     }
 }

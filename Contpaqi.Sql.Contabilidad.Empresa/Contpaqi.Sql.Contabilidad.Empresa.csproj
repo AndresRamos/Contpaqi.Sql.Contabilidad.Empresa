@@ -44,6 +44,9 @@
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
     <Reference Include="System.Data" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ActivosFijos.cs" />
@@ -86,6 +89,7 @@
     <Compile Include="DevolucionesIVA.cs" />
     <Compile Include="DiariosEspeciales.cs" />
     <Compile Include="Digitos.cs" />
+    <Compile Include="DispersionesPagos.cs" />
     <Compile Include="DocumentosAdministrativos.cs" />
     <Compile Include="DocumentosBancarios.cs" />
     <Compile Include="DocumentosDe.cs" />
@@ -97,6 +101,7 @@
     <Compile Include="EmisionesContabilidadElectronica.cs" />
     <Compile Include="EmisionesDPIVA.cs" />
     <Compile Include="EmisionesSAT.cs" />
+    <Compile Include="Factories\ContabilidadEmpresaDbContextFactory.cs" />
     <Compile Include="Folios.cs" />
     <Compile Include="FoliosDigitales.cs" />
     <Compile Include="FoliosUsados.cs" />
@@ -151,6 +156,7 @@
     <None Include="App.config" />
     <None Include="packages.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>

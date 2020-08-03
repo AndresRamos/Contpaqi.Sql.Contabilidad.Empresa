@@ -7,11 +7,11 @@ namespace Contpaqi.Sql.Contabilidad.Empresa
 {
     public class ContabilidadEmpresaDbContext : DbContext
     {
-        protected ContabilidadEmpresaDbContext()
+        public ContabilidadEmpresaDbContext()
         {
         }
 
-        protected ContabilidadEmpresaDbContext(DbCompiledModel model) : base(model)
+        public ContabilidadEmpresaDbContext(DbCompiledModel model) : base(model)
         {
         }
 
@@ -74,6 +74,7 @@ namespace Contpaqi.Sql.Contabilidad.Empresa
         public virtual DbSet<DevolucionesIVA> DevolucionesIVA { get; set; }
         public virtual DbSet<DiariosEspeciales> DiariosEspeciales { get; set; }
         public virtual DbSet<Digitos> Digitos { get; set; }
+        public virtual DbSet<DispersionesPagos> DispersionesPagos { get; set; }
         public virtual DbSet<DocumentosAdministrativos> DocumentosAdministrativos { get; set; }
         public virtual DbSet<DocumentosBancarios> DocumentosBancarios { get; set; }
         public virtual DbSet<DocumentosDe> DocumentosDe { get; set; }
@@ -138,6 +139,14 @@ namespace Contpaqi.Sql.Contabilidad.Empresa
         {
             modelBuilder.Entity<AsocCFDIs>()
                 .Property(e => e.UUID)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<DispersionesPagos>()
+                .Property(e => e.UUID)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<DispersionesPagos>()
+                .Property(e => e.UUIDRep)
                 .IsUnicode(false);
 
             modelBuilder.Entity<DocumentosAdministrativos>()

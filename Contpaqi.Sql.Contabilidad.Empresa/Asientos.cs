@@ -52,5 +52,7 @@ namespace Contpaqi.Sql.Contabilidad.Empresa
         public string TipoCFDI { get; set; }
 
         public bool? EsGasto { get; set; }
+
+        public bool? VisibleBancos { get; set; }
     }
 }

@@ -67,5 +67,8 @@ namespace Contpaqi.Sql.Contabilidad.Empresa
         public bool? UsaAsignaSerieFolio { get; set; }
 
         public bool? PermiteEditarFolio { get; set; }
+
+        [StringLength(20)]
+        public string CodigoAsiento { get; set; }
     }
 }

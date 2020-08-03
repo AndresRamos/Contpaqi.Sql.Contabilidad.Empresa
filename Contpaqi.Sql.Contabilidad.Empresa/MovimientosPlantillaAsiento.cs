@@ -27,7 +27,8 @@ namespace Contpaqi.Sql.Contabilidad.Empresa
         [StringLength(100)]
         public string TextoConcepto { get; set; }
 
-        public int? IdSegmentoNegocio { get; set; }
+        [StringLength(100)]
+        public string IdSegmentoNegocio { get; set; }
 
         public bool? ConcentrarMovimientos { get; set; }
 
@@ -40,7 +41,8 @@ namespace Contpaqi.Sql.Contabilidad.Empresa
         [StringLength(500)]
         public string FormulaImporteME { get; set; }
 
-        public int? IdDiario { get; set; }
+        [StringLength(100)]
+        public string IdDiario { get; set; }
 
         public int? OpcionSegmento { get; set; }
     }
